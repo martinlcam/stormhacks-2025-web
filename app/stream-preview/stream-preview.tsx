@@ -31,8 +31,8 @@ export default function StreamPreview() {
 
   return (
     <div>
-      <video ref={videoRef} width={480} height={320} autoPlay muted />
-      <div className="flex gap-2 mt-2">
+      <video className="justify-center" ref={videoRef} width={480} height={320} autoPlay muted />
+      <div className="flex justify-center gap-2 mt-2">
         {!streaming ? (
           <button onClick={startPreview}>Start Streaming</button>
         ) : (
