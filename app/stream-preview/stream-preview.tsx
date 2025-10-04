@@ -26,8 +26,10 @@ export default function StreamPreview() {
         };
 
         mediaRecorderRef.current.start(300);
-        setStreaming(true);
+        console.log("MediaRecorder started")
       };
+
+      setStreaming(true);
 
       socketRef.current.onerror = (error) => {
         console.error("WebSocket error:", error);

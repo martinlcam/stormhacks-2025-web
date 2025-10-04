@@ -1,10 +1,11 @@
+import Header from "./components/Header"
+
 export default function Home() {
   return (
+    <main className="min-h-screen w-screen flex flex-col overflow-auto">
+      <Header />
 
-    
-
-    <main className="h-screen w-screen overflow-hidden">
-      <div className="flex text-[150px] justify-center items-center h-full w-full">
+      <div className="flex text-[150px] justify-center items-center flex-grow">
         <a href="/stream-preview" className="text-[50px]">
           Stream Preview
         </a>
