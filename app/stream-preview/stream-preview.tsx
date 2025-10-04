@@ -5,6 +5,7 @@ export default function StreamPreview() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const [streaming, setStreaming] = useState(false);
+  const socketRef = useRef<WebSocket | null>(null);
 
   const startPreview = async () => {
     try {
@@ -13,8 +14,25 @@ export default function StreamPreview() {
         videoRef.current.srcObject = stream;
         await videoRef.current.play();
       }
-      mediaRecorderRef.current = new MediaRecorder(stream);
-      setStreaming(true);
+
+      socketRef.current = new WebSocket("ws://localhost:CHANGE/ws/stream/");
+      socketRef.current.onopen = () => {
+        mediaRecorderRef.current = new MediaRecorder(stream);
+
+        mediaRecorderRef.current.ondataavailable = (event) => {
+          if (event.data.size > 0 && socketRef.current?.readyState === WebSocket.OPEN) {
+            socketRef.current.send(event.data);
+          }
+        };
+
+        mediaRecorderRef.current.start(300);
+        setStreaming(true);
+      };
+
+      socketRef.current.onerror = (error) => {
+        console.error("WebSocket error:", error);
+      };
+
     } catch (err) {
       console.error("Error accessing media devices.", err);
     }
