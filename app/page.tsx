@@ -32,7 +32,7 @@ export default function Home() {
           </div>
 
           <div className="text-white mt-5">
-            At Signable, our mission is to bridge the divide between 
+            At Signable, our mission is to bridge the divide between
             Deaf and hearing communities by leveraging technology to
             create accessible, real-time communication tools. We believe
             that everyone deserves to be understood and included, regardless
@@ -40,22 +40,33 @@ export default function Home() {
           </div>
 
           <div className="text-white mt-5">
-            Our web app uses your camera to recognize American Sign Language 
-            (ASL) signs. These signs are translated instantly by our backend 
-            and displayed as readable text and natural-sounding speech (TTS) 
-            on the frontend. This empowers Deaf and hard-of-hearing individuals 
+            Our web app uses your camera to recognize American Sign Language
+            (ASL) signs. These signs are translated instantly by our backend
+            and displayed as readable text and natural-sounding speech (TTS)
+            on the frontend. This empowers Deaf and hard-of-hearing individuals
             to express themselves freely, while making their messages accessible
             to everyone around them, both online and in-person.
           </div>
 
           <div className="text-white mt-5">
-            By transforming ASL gestures into text and voice, Signable helps 
-            break down barriers, promote inclusivity, and foster true connection 
-            in schools, workplaces, and everyday life. Our project is more than 
-            a tool—it’s a step forward in building a world where communication is 
+            By transforming ASL gestures into text and voice, Signable helps
+            break down barriers, promote inclusivity, and foster true connection
+            in schools, workplaces, and everyday life. Our project is more than
+            a tool—it’s a step forward in building a world where communication is
             open to all.
           </div>
-          
+
+          <div className="max-w-lg w-full md:w-1/2 text-white">
+            <p>
+              Our web app uses your camera to recognize American Sign Language (ASL) signs, instantly translating and displaying them as readable text and natural-sounding speech. This empowers Deaf and hard-of-hearing individuals to express themselves freely while improving inclusivity and communication with others.
+            </p>
+            <p className="mt-4">
+              By transforming ASL gestures into text and voice, Signable fosters true connection in schools, workplaces, and everyday life — breaking down barriers and building a world where communication is open to all.
+            </p>
+          </div>
+
+
+
         </div>
       </div>
 
