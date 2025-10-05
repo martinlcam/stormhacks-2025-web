@@ -56,17 +56,6 @@ export default function Home() {
             open to all.
           </div>
 
-          <div className="max-w-lg w-full md:w-1/2 text-white">
-            <p>
-              Our web app uses your camera to recognize American Sign Language (ASL) signs, instantly translating and displaying them as readable text and natural-sounding speech. This empowers Deaf and hard-of-hearing individuals to express themselves freely while improving inclusivity and communication with others.
-            </p>
-            <p className="mt-4">
-              By transforming ASL gestures into text and voice, Signable fosters true connection in schools, workplaces, and everyday life — breaking down barriers and building a world where communication is open to all.
-            </p>
-          </div>
-
-
-
         </div>
       </div>
 
