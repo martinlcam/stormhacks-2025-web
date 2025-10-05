@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localfont from "next/font/local";
+
+const Eina = localfont({
+  src: [
+    {
+      path: "./fonts/OnlineWebFonts_COM_d8453a600c62e71e4d533d4b715f3d19/Eina 04 W03 SemiBold/Eina 04 W03 SemiBold.woff2",
+      weight: "600",
+      style: "normal"
+    }
+  ],
+  variable: "--font-Eina",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${Eina.variable} antialiased`}
       >
         {children}
       </body>

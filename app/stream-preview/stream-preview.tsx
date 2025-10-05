@@ -41,11 +41,15 @@ export default function StreamPreview() {
   };
 
   const stopPreview = () => {
+    mediaRecorderRef.current?.stop();
+    socketRef.current?.close();
+
     const stream = videoRef.current?.srcObject as MediaStream | null;
     if (stream) {
       stream.getTracks().forEach((track) => track.stop());
       if (videoRef.current) videoRef.current.srcObject = null;
     }
+
     setStreaming(false);
   };
 
