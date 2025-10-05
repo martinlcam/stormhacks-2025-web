@@ -25,6 +25,21 @@ export default function StreamPreview() {
           }
         };
 
+        // Log incoming messages from the server so we can see `asl_batch` replies
+        if (socketRef.current) {
+          socketRef.current.onmessage = (ev) => {
+            try {
+              console.log('WS message:', ev.data);
+            } catch (e) {
+              console.log('WS message (non-JSON):', ev.data);
+            }
+          };
+
+          socketRef.current.onclose = (ev) => {
+            console.log('WebSocket closed', ev);
+          };
+        }
+
         mediaRecorderRef.current.start(100);
         console.log("MediaRecorder started")
       };
