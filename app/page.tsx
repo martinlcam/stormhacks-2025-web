@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
       <main className="min-h-screen w-screen flex flex-col overflow-auto">
-        <Header />
+        <Header/>
 
         <div className="flex flex-col items-center flex-grow justify-start px-4 md:px-8">
 

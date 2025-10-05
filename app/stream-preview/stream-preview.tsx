@@ -15,7 +15,7 @@ export default function StreamPreview() {
         await videoRef.current.play();
       }
 
-      socketRef.current = new WebSocket("ws://localhost:CHANGE/ws/stream/");
+      socketRef.current = new WebSocket("ws://localhost:4000/ws/stream/");
       socketRef.current.onopen = () => {
         mediaRecorderRef.current = new MediaRecorder(stream);
 
@@ -25,7 +25,7 @@ export default function StreamPreview() {
           }
         };
 
-        mediaRecorderRef.current.start(300);
+        mediaRecorderRef.current.start(100);
         console.log("MediaRecorder started")
       };
 
