@@ -9,7 +9,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-start px-4 md:px-8">
 
         <div className="w-full max-w-200 mt-[15vh] md:mt-[20vh]">
-          <div className="text-5xl font-semibold text-center mb-8 animate-bounce">
+          <div className="text-5xl font-semibold text-center mb-8 animate-slideInUp">
             An all in one solution for the auditorily impaired
           </div>
         </div>
